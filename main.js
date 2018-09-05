@@ -57,26 +57,17 @@
 
         this.input.on('pointerdown', function () {
 
-            /*if (timedEvent.paused)
-            {
-                timedEvent.paused = false;
-            }
-            else
-            {
-                timedEvent.paused = true;
-            }*/
 						side *= -1;
         });
+
     }
     function getRandomArbitrary(min, max) {
         return Math.random() * (max - min) + min;
     }
     function update() 
     {
-        if ( game.input.mousePointer.x >= polygon.points[7].x)
-            side = 1;
-        else 
-            side = -1;
+        //if (this.input.activePointer.isDown)
+        //   side *= -1;
         //console.log(timedEvent.repeat);
     }
 
