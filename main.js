@@ -1,12 +1,13 @@
-    console.log("HELLO!");
+   
     var config = {
-        width: 800,
-        height: 800,
+        width: 768,
+        height: 1024,
         type: Phaser.AUTO,
         parent: 'phaser-example',
         scene: {
             create: create,
-            update: update
+            update: update,
+            preload: preload
         }
     };
 
@@ -17,9 +18,12 @@
     var side = 1;
     var incx = 15;
     var incy = 40;
-    function preload() {console.log("HELLO!");}
+    function preload() {
+        this.load.image('background','img/back.png');
+    }
     function create() 
     {
+        this.add.image(0, 0, 'background');
         polygon = new Phaser.Geom.Polygon([
             2.7*incx, incy,
             3*incx, 2*incy,
